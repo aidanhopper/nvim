@@ -1,5 +1,5 @@
-require('options')
-require('plugins')
-require('functions')
-require('keys')
+require("options")
+require("plugins")
+require("keys")
+require("telescope")
 
