@@ -1,6 +1,17 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { "help", "rust", "c", "lua", "rust" },
+  ensure_installed = {
+    "help",
+    "rust",
+    "c",
+    "lua",
+    "rust",
+    "tsx",
+    "html",
+    "css",
+    "json",
+    "toml",
+  },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -41,3 +52,6 @@ require'nvim-treesitter.configs'.setup {
     },
   },
 }
+
+local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }

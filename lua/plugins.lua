@@ -93,4 +93,8 @@ return require("packer").startup(function(use)
     "folke/which-key.nvim"
   }
 
+  use {
+    "windwp/nvim-ts-autotag"
+  }
+
 end)
