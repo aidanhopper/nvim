@@ -97,4 +97,9 @@ return require("packer").startup(function(use)
     "windwp/nvim-ts-autotag"
   }
 
+  use {
+    "nvim-tree/nvim-tree.lua",
+    requires = "nvim-tree/nvim-web-devicons"
+  }
+
 end)

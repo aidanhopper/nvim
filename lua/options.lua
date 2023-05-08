@@ -19,7 +19,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.undodir = os.getenv("HOME") .. "/.cache/vim/undodir"
 vim.opt.undofile = true
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
 
