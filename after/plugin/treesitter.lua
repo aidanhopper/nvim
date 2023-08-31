@@ -2,15 +2,7 @@ require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = {
     "help",
-    "rust",
     "c",
-    "lua",
-    "rust",
-    "tsx",
-    "html",
-    "css",
-    "json",
-    "toml",
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -37,6 +29,8 @@ require'nvim-treesitter.configs'.setup {
         ["if"] = "@function.inner",
         ["ac"] = "@class.outer",
         ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+        ["al"] = { query = "@loop.outer", desc = "Select outer part of a loop" },
+        ["il"] = { query = "@loop.inner", desc = "Select inner part of a loop" },
       },
       -- You can choose the select mode (default is charwise 'v')
       selection_modes = {
@@ -53,5 +47,3 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }

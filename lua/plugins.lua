@@ -14,6 +14,10 @@ return require("packer").startup(function(use)
   }
 
   use {
+    "https://github.com/morhetz/gruvbox"
+  }
+
+  use {
     "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter/nvim-treesitter-textobjects",
     run = ":TSUpdate"
@@ -80,10 +84,6 @@ return require("packer").startup(function(use)
   }
 
   use {
-    "folke/zen-mode.nvim"
-  }
-
-  use {
     'akinsho/bufferline.nvim',
     tag = "v3.*",
     requires = 'nvim-tree/nvim-web-devicons'
@@ -98,29 +98,10 @@ return require("packer").startup(function(use)
   }
 
   use {
-    "nvim-tree/nvim-tree.lua",
-    requires = "nvim-tree/nvim-web-devicons"
+    "mfussenegger/nvim-dap",
+    "mfussenegger/nvim-dap-python",
+    "rcarriga/nvim-dap-ui",
+    "jay-babu/mason-nvim-dap.nvim"
   }
-
-  use {
-    "nvim-neorg/neorg",
-    config = function()
-        require('neorg').setup {
-            load = {
-                ["core.defaults"] = {}, -- Loads default behaviour
-                ["core.concealer"] = {}, -- Adds pretty icons to your documents
-                ["core.dirman"] = { -- Manages Neorg workspaces
-                    config = {
-                        workspaces = {
-                            notes = "~/notes",
-                        },
-                    },
-                },
-            },
-        }
-    end,
-    run = ":Neorg sync-parsers",
-    requires = "nvim-lua/plenary.nvim",
-}
 
 end)

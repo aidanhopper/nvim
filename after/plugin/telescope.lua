@@ -4,9 +4,10 @@ require('telescope').setup{
     -- ...
   },
   pickers = {
-    find_files = {theme = "ivy"},
-    diagnostics = {theme = "ivy"},
-    buffers = {theme = "ivy"},
+    --find_files = {theme = "ivy"},
+    --diagnostics = {theme = "ivy"},
+    --buffers = {theme = "ivy"},
+    --git_files = {theme = "ivy"}
 
   },
   extensions = {

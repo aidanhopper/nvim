@@ -1,6 +1,8 @@
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
@@ -21,6 +23,7 @@ vim.opt.undodir = os.getenv("HOME") .. "/.cache/vim/undodir"
 vim.opt.undofile = true
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
+vim.g.netrw_banner = 0
 vim.g.mapleader = " "
 
 
