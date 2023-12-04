@@ -14,10 +14,6 @@ return require("packer").startup(function(use)
   }
 
   use {
-    "https://github.com/morhetz/gruvbox"
-  }
-
-  use {
     "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter/nvim-treesitter-textobjects",
     run = ":TSUpdate"
@@ -53,26 +49,14 @@ return require("packer").startup(function(use)
   }
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   use {
-    'nvim-treesitter/playground'
+    'mbbill/undotree'
   }
 
-  use {
-      'tpope/vim-fugitive'
-  }
-
-   use {
-      'mbbill/undotree'
-   }
-
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
 
   use {
     "RRethy/vim-illuminate"
@@ -84,24 +68,7 @@ return require("packer").startup(function(use)
   }
 
   use {
-    'akinsho/bufferline.nvim',
-    tag = "v3.*",
-    requires = 'nvim-tree/nvim-web-devicons'
-  }
-
-  use {
     "folke/which-key.nvim"
-  }
-
-  use {
-    "windwp/nvim-ts-autotag"
-  }
-
-  use {
-    "mfussenegger/nvim-dap",
-    "mfussenegger/nvim-dap-python",
-    "rcarriga/nvim-dap-ui",
-    "jay-babu/mason-nvim-dap.nvim"
   }
 
 end)

@@ -1,9 +1,11 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = {
-    "help",
-    "c",
   },
+
+  disable = function (bufnr)
+    return vim.api.nvim_vuf_line_count(bufnr) > 50000
+  end,
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,

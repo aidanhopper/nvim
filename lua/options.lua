@@ -25,5 +25,5 @@ vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.g.netrw_banner = 0
 vim.g.mapleader = " "
-
+vim.cmd([[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']])
 
