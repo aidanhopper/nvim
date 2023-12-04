@@ -1,4 +1,4 @@
-require("keys")
 require("options")
-require("telescope")
 require("plugins")
+require("telescope")
+require("keys")
