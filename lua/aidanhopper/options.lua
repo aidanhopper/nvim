@@ -1,4 +1,3 @@
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -19,11 +18,13 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
-vim.opt.undodir = os.getenv("HOME") .. "/.cache/vim/undodir"
+vim.opt.undodir = os.getenv "HOME" .. "/.cache/vim/undodir"
 vim.opt.undofile = true
 vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
+vim.opt.gp = "git grep -n"
 vim.g.netrw_banner = 0
 vim.g.mapleader = " "
-vim.cmd([[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']])
-
+vim.cmd [[
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+]]
