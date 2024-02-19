@@ -1,4 +1,12 @@
 return {
+
+  {
+    "https://github.com/folke/trouble.nvim",
+    opts = {
+      icons = false,
+    },
+  },
+
   {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v3.x",
@@ -92,6 +100,9 @@ return {
         end, opts)
         vim.keymap.set("n", "]d", function()
           vim.diagnostic.goto_prev()
+        end, opts)
+        vim.keymap.set("n", "<leader>vv", function()
+          require("trouble").toggle "workspace_diagnostics"
         end, opts)
       end)
 
