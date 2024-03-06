@@ -101,9 +101,7 @@ return {
         vim.keymap.set("n", "]d", function()
           vim.diagnostic.goto_prev()
         end, opts)
-        vim.keymap.set("n", "<leader>vv", function()
-          require("trouble").toggle "workspace_diagnostics"
-        end, opts)
+        vim.keymap.set("n", "<leader>vv", ":TroubleToggle<CR>", opts)
       end)
 
       require("mason-lspconfig").setup {
@@ -128,7 +126,6 @@ return {
       null_ls.setup {
         sources = {
           null_ls.builtins.formatting.stylua,
-          null_ls.builtins.formatting.beautysh,
         },
       }
     end,
